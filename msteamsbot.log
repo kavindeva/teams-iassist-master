@@ -1,0 +1,666 @@
+2022-10-03 15:01:56,874:app:Exception on /msteams/messages [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1887, in ensure_sync
+    return self.async_to_sync(func)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1908, in async_to_sync
+    raise RuntimeError(
+RuntimeError: Install Flask with the 'async' extra in order to use async views.
+2022-10-03 15:15:47,134:app:Exception on /msteams/messages [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1599, in ensure_sync
+    return self.async_to_sync(func)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1620, in async_to_sync
+    raise RuntimeError(
+RuntimeError: Install Flask with the 'async' extra in order to use async views.
+2022-10-03 15:18:27,368:app:/msteams/messages route
+2022-10-03 15:18:27,374:app:Exception on /msteams/messages [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 218, in __call__
+    return call_result.result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 437, in result
+    return self.__get_result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 389, in __get_result
+    raise self._exception
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 284, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:/inetpub/wwwroot/teams-iassist/app.py", line 100, in messages
+    response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 450, in process_activity
+    identity = await self._authenticate_request(activity, auth_header)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 558, in _authenticate_request
+    claims = await JwtTokenValidation.authenticate_request(
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 51, in authenticate_request
+    raise PermissionError("Unauthorized Access. Request is not authorized")
+PermissionError: Unauthorized Access. Request is not authorized
+2022-10-03 15:20:07,283:app:/msteams/messages route
+2022-10-03 15:20:07,285:app:Exception on /msteams/messages [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 218, in __call__
+    return call_result.result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 437, in result
+    return self.__get_result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 389, in __get_result
+    raise self._exception
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 284, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:/inetpub/wwwroot/teams-iassist/app.py", line 100, in messages
+    response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 450, in process_activity
+    identity = await self._authenticate_request(activity, auth_header)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 558, in _authenticate_request
+    claims = await JwtTokenValidation.authenticate_request(
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 71, in authenticate_request
+    claims_identity = await JwtTokenValidation.validate_auth_header(
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 172, in validate_auth_header
+    claims = await get_claims()
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 98, in get_claims
+    if SkillValidation.is_skill_token(auth_header):
+  File "C:\Python\lib\site-packages\botframework\connector\auth\skill_validation.py", line 58, in is_skill_token
+    token = jwt.decode(bearer_token, verify=False)
+  File "C:\Python\lib\site-packages\jwt\api_jwt.py", line 168, in decode
+    decoded = self.decode_complete(
+  File "C:\Python\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    raise DecodeError(
+jwt.exceptions.DecodeError: It is required that you pass in a value for the "algorithms" argument when calling decode().
+2022-10-03 16:35:07,972:app:/msteams/messages route
+2022-10-03 16:35:07,979:app:Exception on /msteams/messages [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 218, in __call__
+    return call_result.result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 437, in result
+    return self.__get_result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 389, in __get_result
+    raise self._exception
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 284, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:/inetpub/wwwroot/teams-iassist/app.py", line 100, in messages
+    response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 450, in process_activity
+    identity = await self._authenticate_request(activity, auth_header)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 558, in _authenticate_request
+    claims = await JwtTokenValidation.authenticate_request(
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 71, in authenticate_request
+    claims_identity = await JwtTokenValidation.validate_auth_header(
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 172, in validate_auth_header
+    claims = await get_claims()
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 98, in get_claims
+    if SkillValidation.is_skill_token(auth_header):
+  File "C:\Python\lib\site-packages\botframework\connector\auth\skill_validation.py", line 58, in is_skill_token
+    token = jwt.decode(bearer_token, verify=False)
+  File "C:\Python\lib\site-packages\jwt\api_jwt.py", line 168, in decode
+    decoded = self.decode_complete(
+  File "C:\Python\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    raise DecodeError(
+jwt.exceptions.DecodeError: It is required that you pass in a value for the "algorithms" argument when calling decode().
+2022-10-03 16:45:30,508:app:/msteams/messages route
+2022-10-03 16:46:55,000:app:/msteams/messages route
+2022-10-03 16:47:11,130:app:/msteams/messages route
+2022-10-03 16:47:11,132:bot1:Etisalat bot function executed
+2022-10-03 16:47:22,882:app:/msteams/messages route
+2022-10-03 16:47:22,891:bot1:Etisalat bot function executed
+2022-10-03 16:47:31,925:app:/msteams/messages route
+2022-10-03 16:47:31,928:bot1:Etisalat bot function executed
+2022-10-04 08:25:28,338:app:/msteams/messages route
+2022-10-04 08:25:28,338:app:/msteams/messages route
+2022-10-04 08:25:39,157:app:/msteams/messages route
+2022-10-04 08:25:39,159:bot1:Etisalat bot function executed
+2022-10-04 08:25:49,503:app:/msteams/messages route
+2022-10-04 08:25:49,505:bot1:Etisalat bot function executed
+2022-10-04 08:27:52,874:app:/msteams/messages route
+2022-10-04 08:27:52,876:bot1:Etisalat bot function executed
+2022-10-04 08:28:32,150:app:/msteams/messages route
+2022-10-04 08:28:32,153:bot1:Etisalat bot function executed
+2022-10-04 08:28:39,309:app:/msteams/messages route
+2022-10-04 08:28:39,311:bot1:Etisalat bot function executed
+2022-10-04 08:28:43,628:app:/msteams/messages route
+2022-10-04 08:28:43,630:bot1:Etisalat bot function executed
+2022-10-04 08:30:45,991:app:/msteams/messages route
+2022-10-04 08:30:45,993:bot1:Etisalat bot function executed
+2022-10-04 08:32:20,335:app:/msteams/messages route
+2022-10-04 08:32:24,465:app:/msteams/messages route
+2022-10-04 08:32:32,962:app:/msteams/messages route
+2022-10-04 08:32:32,964:bot1:Etisalat bot function executed
+2022-10-04 08:32:41,375:app:/msteams/messages route
+2022-10-04 08:32:41,377:bot1:Etisalat bot function executed
+2022-10-04 08:35:04,748:app:/msteams/messages route
+2022-10-04 08:35:11,887:app:/msteams/messages route
+2022-10-04 08:36:07,283:app:/msteams/messages route
+2022-10-04 08:36:09,235:app:/msteams/messages route
+2022-10-04 08:36:11,164:app:/msteams/messages route
+2022-10-04 08:36:12,973:app:/msteams/messages route
+2022-10-04 08:36:14,742:app:/msteams/messages route
+2022-10-04 08:39:33,654:app:/msteams/messages route
+2022-10-04 08:39:33,661:app:Exception on /msteams/messages [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 218, in __call__
+    return call_result.result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 437, in result
+    return self.__get_result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 389, in __get_result
+    raise self._exception
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 284, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:/inetpub/wwwroot/teams-iassist/app.py", line 100, in messages
+    response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 450, in process_activity
+    identity = await self._authenticate_request(activity, auth_header)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 558, in _authenticate_request
+    claims = await JwtTokenValidation.authenticate_request(
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 51, in authenticate_request
+    raise PermissionError("Unauthorized Access. Request is not authorized")
+PermissionError: Unauthorized Access. Request is not authorized
+2022-10-04 08:39:50,739:app:/msteams/messages route
+2022-10-04 08:39:50,740:app:Exception on /msteams/messages [POST]
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 218, in __call__
+    return call_result.result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 437, in result
+    return self.__get_result()
+  File "C:\Python\lib\concurrent\futures\_base.py", line 389, in __get_result
+    raise self._exception
+  File "C:\Python\lib\site-packages\asgiref\sync.py", line 284, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:/inetpub/wwwroot/teams-iassist/app.py", line 100, in messages
+    response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 450, in process_activity
+    identity = await self._authenticate_request(activity, auth_header)
+  File "C:\Python\lib\site-packages\botbuilder\core\bot_framework_adapter.py", line 558, in _authenticate_request
+    claims = await JwtTokenValidation.authenticate_request(
+  File "C:\Python\lib\site-packages\botframework\connector\auth\jwt_token_validation.py", line 51, in authenticate_request
+    raise PermissionError("Unauthorized Access. Request is not authorized")
+PermissionError: Unauthorized Access. Request is not authorized
+2022-10-04 08:40:36,526:app:/msteams/messages route
+2022-10-04 08:41:32,199:app:/msteams/messages route
+2022-10-04 08:42:04,030:app:/msteams/messages route
+2022-10-04 08:44:02,783:app:/msteams/messages route
+2022-10-04 08:44:49,509:app:/msteams/messages route
+2022-10-04 08:44:58,760:app:/msteams/messages route
+2022-10-04 08:45:42,251:app:/msteams/messages route
+2022-10-04 08:52:26,320:app:/msteams/messages route
+2022-10-04 08:52:39,257:app:/msteams/messages route
+2022-10-04 08:52:39,259:iAssistbot:Custom app text message received
+2022-10-04 08:52:40,249:iAssistbot:1 has confidence = 0.79108435
+2022-10-04 08:52:40,249:iAssistbot:1
+2022-10-04 08:52:40,254:iAssistbot:Solution fetched
+2022-10-04 08:52:50,133:app:/msteams/messages route
+2022-10-04 08:52:50,142:iAssistbot:Custom app text message received
+2022-10-04 08:52:50,209:iAssistbot:24 has confidence = 0.9594244
+2022-10-04 08:52:50,210:iAssistbot:24
+2022-10-04 08:52:50,213:iAssistbot:Solution fetched
+2022-10-04 08:53:02,079:app:/msteams/messages route
+2022-10-04 08:53:02,081:iAssistbot:Custom app text message received
+2022-10-04 08:53:02,146:iAssistbot:24 has confidence = 0.9594244
+2022-10-04 08:53:02,146:iAssistbot:24
+2022-10-04 08:53:02,150:iAssistbot:Solution fetched
+2022-10-04 08:53:06,166:app:/msteams/messages route
+2022-10-04 08:53:06,168:iAssistbot:Custom app text message received
+2022-10-04 08:53:06,235:iAssistbot:24 has confidence = 0.9594244
+2022-10-04 08:53:06,236:iAssistbot:24
+2022-10-04 08:53:06,239:iAssistbot:Solution fetched
+2022-10-04 08:54:07,888:app:/msteams/messages route
+2022-10-04 08:54:07,890:iAssistbot:Custom app text message received
+2022-10-04 08:54:40,640:app:/msteams/messages route
+2022-10-04 08:54:40,642:iAssistbot:Custom app text message received
+2022-10-04 08:55:11,990:app:/msteams/messages route
+2022-10-04 08:55:11,992:iAssistbot:Custom app text message received
+2022-10-04 08:55:12,069:iAssistbot:1 has confidence = 0.79108435
+2022-10-04 08:55:12,069:iAssistbot:1
+2022-10-04 08:55:12,073:iAssistbot:Solution fetched
+2022-10-04 08:55:18,325:app:/msteams/messages route
+2022-10-04 08:55:18,328:iAssistbot:Custom app text message received
+2022-10-04 08:55:18,406:iAssistbot:82 has confidence = 0.9995353
+2022-10-04 08:55:18,407:iAssistbot:82
+2022-10-04 08:55:18,411:iAssistbot:Solution fetched
+2022-10-04 08:55:27,797:app:/msteams/messages route
+2022-10-04 08:55:27,800:iAssistbot:Custom app text message received
+2022-10-04 08:55:27,871:iAssistbot:76 has confidence = 0.75918305
+2022-10-04 08:55:27,872:iAssistbot:76
+2022-10-04 08:55:27,876:iAssistbot:Solution fetched
+2022-10-04 08:55:39,774:app:/msteams/messages route
+2022-10-04 08:55:39,776:iAssistbot:Custom app text message received
+2022-10-04 08:55:39,847:iAssistbot:2 has confidence = 0.9822167
+2022-10-04 08:55:39,848:iAssistbot:2
+2022-10-04 08:55:39,851:iAssistbot:Solution fetched
+2022-10-04 08:55:58,766:app:/msteams/messages route
+2022-10-04 08:55:58,769:iAssistbot:Custom app text message received
+2022-10-04 08:57:04,156:app:/msteams/messages route
+2022-10-04 08:57:04,159:iAssistbot:Custom app text message received
+2022-10-04 08:57:04,230:iAssistbot:2 has confidence = 0.9822167
+2022-10-04 08:57:04,230:iAssistbot:2
+2022-10-04 08:57:04,234:iAssistbot:Solution fetched
+2022-10-11 07:45:39,217:app:/msteams/messages route
+2022-10-11 07:46:08,719:app:/msteams/messages route
+2022-10-11 07:46:08,721:iAssistbot:Custom app text message received
+2022-10-11 07:47:39,335:app:/msteams/messages route
+2022-10-11 07:48:00,733:app:/msteams/messages route
+2022-10-11 07:48:00,736:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:49:04,562:app:/msteams/messages route
+2022-10-11 07:49:04,565:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:51:11,460:app:/msteams/messages route
+2022-10-11 07:51:32,954:app:/msteams/messages route
+2022-10-11 07:51:32,956:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:53:57,167:app:/msteams/messages route
+2022-10-11 07:54:08,304:app:/msteams/messages route
+2022-10-11 07:54:08,306:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:55:42,789:app:/msteams/messages route
+2022-10-11 07:55:58,664:app:/msteams/messages route
+2022-10-11 07:55:58,667:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:56:39,730:app:/msteams/messages route
+2022-10-11 07:57:00,060:app:/msteams/messages route
+2022-10-11 07:57:00,063:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:57:01,146:iAssistbot:2 has confidence = 1.0
+2022-10-11 07:57:01,146:iAssistbot:2
+2022-10-11 07:57:01,146:iAssistbot:Index value received
+2022-10-11 07:57:01,152:iAssistbot:Post response value received
+2022-10-11 07:57:01,152:iAssistbot:Solution sliced
+2022-10-11 07:57:01,152:iAssistbot:Solution fetched
+2022-10-11 07:57:06,061:app:/msteams/messages route
+2022-10-11 07:57:06,064:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:57:06,141:iAssistbot:116 has confidence = 0.8851909
+2022-10-11 07:57:06,141:iAssistbot:116
+2022-10-11 07:57:06,141:iAssistbot:Index value received
+2022-10-11 07:57:06,146:iAssistbot:Post response value received
+2022-10-11 07:57:06,146:iAssistbot:Solution sliced
+2022-10-11 07:57:06,146:iAssistbot:Solution fetched
+2022-10-11 07:57:16,864:app:/msteams/messages route
+2022-10-11 07:57:16,867:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:57:16,947:iAssistbot:115 has confidence = 0.8894422
+2022-10-11 07:57:16,948:iAssistbot:115
+2022-10-11 07:57:16,948:iAssistbot:Index value received
+2022-10-11 07:57:16,952:iAssistbot:Post response value received
+2022-10-11 07:57:16,953:iAssistbot:Solution sliced
+2022-10-11 07:57:16,953:iAssistbot:Solution fetched
+2022-10-11 07:57:21,027:app:/msteams/messages route
+2022-10-11 07:57:21,029:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:57:21,107:iAssistbot:110 has confidence = 0.99908507
+2022-10-11 07:57:21,108:iAssistbot:110
+2022-10-11 07:57:21,108:iAssistbot:Index value received
+2022-10-11 07:57:21,112:iAssistbot:Post response value received
+2022-10-11 07:57:21,112:iAssistbot:Solution sliced
+2022-10-11 07:57:21,113:iAssistbot:Solution fetched
+2022-10-11 07:57:25,250:app:/msteams/messages route
+2022-10-11 07:57:25,252:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:57:25,329:iAssistbot:109 has confidence = 0.9981692
+2022-10-11 07:57:25,329:iAssistbot:109
+2022-10-11 07:57:25,329:iAssistbot:Index value received
+2022-10-11 07:57:25,333:iAssistbot:Post response value received
+2022-10-11 07:57:25,334:iAssistbot:Solution sliced
+2022-10-11 07:57:25,334:iAssistbot:Solution fetched
+2022-10-11 07:58:50,840:app:/msteams/messages route
+2022-10-11 07:59:01,851:app:/msteams/messages route
+2022-10-11 07:59:17,611:app:/msteams/messages route
+2022-10-11 07:59:17,614:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:59:18,686:iAssistbot:2 has confidence = 1.0
+2022-10-11 07:59:18,687:iAssistbot:2
+2022-10-11 07:59:18,687:iAssistbot:Index value received
+2022-10-11 07:59:18,692:iAssistbot:Post response value received
+2022-10-11 07:59:18,692:iAssistbot:Solution sliced
+2022-10-11 07:59:18,692:iAssistbot:Solution fetched
+2022-10-11 07:59:27,930:app:/msteams/messages route
+2022-10-11 07:59:27,933:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:59:28,010:iAssistbot:116 has confidence = 0.8851909
+2022-10-11 07:59:28,010:iAssistbot:116
+2022-10-11 07:59:28,010:iAssistbot:Index value received
+2022-10-11 07:59:28,014:iAssistbot:Post response value received
+2022-10-11 07:59:28,014:iAssistbot:Solution sliced
+2022-10-11 07:59:28,015:iAssistbot:Solution fetched
+2022-10-11 07:59:32,053:app:/msteams/messages route
+2022-10-11 07:59:32,056:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 07:59:32,134:iAssistbot:115 has confidence = 0.8894422
+2022-10-11 07:59:32,135:iAssistbot:115
+2022-10-11 07:59:32,135:iAssistbot:Index value received
+2022-10-11 07:59:32,139:iAssistbot:Post response value received
+2022-10-11 07:59:32,140:iAssistbot:Solution sliced
+2022-10-11 07:59:32,140:iAssistbot:Solution fetched
+2022-10-11 08:05:23,115:app:/msteams/messages route
+2022-10-11 08:05:24,087:app:/msteams/messages route
+2022-10-11 08:05:58,233:app:/msteams/messages route
+2022-10-11 08:05:58,236:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 08:05:59,316:iAssistbot:2 has confidence = 1.0
+2022-10-11 08:05:59,316:iAssistbot:2
+2022-10-11 08:05:59,316:iAssistbot:Index value received
+2022-10-11 08:05:59,321:iAssistbot:Post response value received
+2022-10-11 08:05:59,322:iAssistbot:Solution sliced
+2022-10-11 08:05:59,322:iAssistbot:Solution fetched
+2022-10-11 08:06:17,953:app:/msteams/messages route
+2022-10-11 08:06:17,955:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 08:06:18,029:iAssistbot:116 has confidence = 0.8851909
+2022-10-11 08:06:18,029:iAssistbot:116
+2022-10-11 08:06:18,029:iAssistbot:Index value received
+2022-10-11 08:06:18,034:iAssistbot:Post response value received
+2022-10-11 08:06:18,034:iAssistbot:Solution sliced
+2022-10-11 08:06:18,034:iAssistbot:Solution fetched
+2022-10-11 08:06:28,472:app:/msteams/messages route
+2022-10-11 08:06:28,475:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 08:06:28,550:iAssistbot:115 has confidence = 0.8894422
+2022-10-11 08:06:28,551:iAssistbot:115
+2022-10-11 08:06:28,551:iAssistbot:Index value received
+2022-10-11 08:06:28,555:iAssistbot:Post response value received
+2022-10-11 08:06:28,555:iAssistbot:Solution sliced
+2022-10-11 08:06:28,555:iAssistbot:Solution fetched
+2022-10-11 08:06:56,493:app:/msteams/messages route
+2022-10-11 08:06:56,495:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 08:06:56,571:iAssistbot:1 has confidence = 0.99984324
+2022-10-11 08:06:56,571:iAssistbot:1
+2022-10-11 08:06:56,572:iAssistbot:Index value received
+2022-10-11 08:06:56,576:iAssistbot:Post response value received
+2022-10-11 08:06:56,576:iAssistbot:Solution sliced
+2022-10-11 08:06:56,576:iAssistbot:Solution fetched
+2022-10-11 08:07:18,440:app:/msteams/messages route
+2022-10-11 08:07:18,442:iAssistbot:iAssist bot Custom app text message received
+2022-10-11 08:07:18,515:iAssistbot:116 has confidence = 0.8851909
+2022-10-11 08:07:18,515:iAssistbot:116
+2022-10-11 08:07:18,515:iAssistbot:Index value received
+2022-10-11 08:07:18,520:iAssistbot:Post response value received
+2022-10-11 08:07:18,520:iAssistbot:Solution sliced
+2022-10-11 08:07:18,520:iAssistbot:Solution fetched
+2022-10-17 13:39:14,590:app:/msteams/messages route
+2022-10-17 13:39:15,184:iAssistbot:iAssist bot Custom app text message received
+2022-10-17 13:39:16,267:iAssistbot:110 has confidence = 0.99908507
+2022-10-17 13:39:16,268:iAssistbot:110
+2022-10-17 13:39:16,268:iAssistbot:Index value received
+2022-10-17 13:39:16,273:iAssistbot:Post response value received
+2022-10-17 13:39:16,273:iAssistbot:Solution sliced
+2022-10-17 13:39:16,274:iAssistbot:Solution fetched
+2022-10-17 13:40:40,042:app:/msteams/messages route
+2022-10-17 13:40:40,044:iAssistbot:iAssist bot Custom app text message received
+2022-10-17 13:40:40,117:iAssistbot:3 has confidence = 0.99999726
+2022-10-17 13:40:40,117:iAssistbot:3
+2022-10-17 13:40:40,117:iAssistbot:Index value received
+2022-10-17 13:40:40,121:iAssistbot:Post response value received
+2022-10-17 13:40:40,122:iAssistbot:Solution sliced
+2022-10-17 13:40:40,122:iAssistbot:Solution fetched
+2022-10-17 13:40:54,292:app:/msteams/messages route
+2022-10-17 13:40:54,295:iAssistbot:iAssist bot Custom app text message received
+2022-10-17 13:40:54,363:iAssistbot:2 has confidence = 0.99999976
+2022-10-17 13:40:54,363:iAssistbot:2
+2022-10-17 13:40:54,363:iAssistbot:Index value received
+2022-10-17 13:40:54,368:iAssistbot:Post response value received
+2022-10-17 13:40:54,368:iAssistbot:Solution sliced
+2022-10-17 13:40:54,368:iAssistbot:Solution fetched
+2022-10-17 13:41:15,713:app:/msteams/messages route
+2022-10-17 13:41:15,715:iAssistbot:iAssist bot Custom app text message received
+2022-10-17 13:41:15,787:iAssistbot:116 has confidence = 0.8851909
+2022-10-17 13:41:15,787:iAssistbot:116
+2022-10-17 13:41:15,787:iAssistbot:Index value received
+2022-10-17 13:41:15,792:iAssistbot:Post response value received
+2022-10-17 13:41:15,792:iAssistbot:Solution sliced
+2022-10-17 13:41:15,792:iAssistbot:Solution fetched
+2022-10-17 13:45:05,100:app:/msteams/messages route
+2022-10-17 13:45:05,507:iAssistbot:iAssist bot Custom app text message received
+2022-10-17 13:45:06,583:iAssistbot:3 has confidence = 0.99999726
+2022-10-17 13:45:06,583:iAssistbot:3
+2022-10-17 13:45:06,583:iAssistbot:Index value received
+2022-10-17 13:45:06,588:iAssistbot:Post response value received
+2022-10-17 13:45:06,588:iAssistbot:Solution sliced
+2022-10-17 13:45:06,589:iAssistbot:Solution fetched
+2022-10-17 13:45:16,157:app:/msteams/messages route
+2022-10-17 13:45:16,160:iAssistbot:iAssist bot Custom app text message received
+2022-10-17 13:45:16,234:iAssistbot:116 has confidence = 0.8851909
+2022-10-17 13:45:16,235:iAssistbot:116
+2022-10-17 13:45:16,235:iAssistbot:Index value received
+2022-10-17 13:45:16,239:iAssistbot:Post response value received
+2022-10-17 13:45:16,239:iAssistbot:Solution sliced
+2022-10-17 13:45:16,239:iAssistbot:Solution fetched
+2022-10-18 05:07:39,157:app:/msteams/messages route
+2022-10-18 05:07:39,639:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:07:40,750:iAssistbot:109 has confidence = 0.9981692
+2022-10-18 05:07:40,751:iAssistbot:109
+2022-10-18 05:07:40,751:iAssistbot:Index value received
+2022-10-18 05:07:40,756:iAssistbot:Post response value received
+2022-10-18 05:07:40,756:iAssistbot:Solution sliced
+2022-10-18 05:07:40,756:iAssistbot:Solution fetched
+2022-10-18 05:07:54,756:app:/msteams/messages route
+2022-10-18 05:07:54,759:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:07:54,836:iAssistbot:3 has confidence = 0.99999726
+2022-10-18 05:07:54,837:iAssistbot:3
+2022-10-18 05:07:54,837:iAssistbot:Index value received
+2022-10-18 05:07:54,841:iAssistbot:Post response value received
+2022-10-18 05:07:54,841:iAssistbot:Solution sliced
+2022-10-18 05:07:54,841:iAssistbot:Solution fetched
+2022-10-18 05:08:16,291:app:/msteams/messages route
+2022-10-18 05:08:16,293:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:08:16,363:iAssistbot:1 has confidence = 1.0
+2022-10-18 05:08:16,363:iAssistbot:1
+2022-10-18 05:08:16,363:iAssistbot:Index value received
+2022-10-18 05:08:16,367:iAssistbot:Post response value received
+2022-10-18 05:08:16,368:iAssistbot:Solution sliced
+2022-10-18 05:08:16,368:iAssistbot:Solution fetched
+2022-10-18 05:08:29,292:app:/msteams/messages route
+2022-10-18 05:08:29,295:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:08:29,368:iAssistbot:116 has confidence = 0.8851909
+2022-10-18 05:08:29,368:iAssistbot:116
+2022-10-18 05:08:29,368:iAssistbot:Index value received
+2022-10-18 05:08:29,373:iAssistbot:Post response value received
+2022-10-18 05:08:29,373:iAssistbot:Solution sliced
+2022-10-18 05:08:29,374:iAssistbot:Solution fetched
+2022-10-18 05:08:40,878:app:/msteams/messages route
+2022-10-18 05:08:40,880:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:08:40,952:iAssistbot:5 has confidence = 1.0
+2022-10-18 05:08:40,952:iAssistbot:5
+2022-10-18 05:08:40,953:iAssistbot:Index value received
+2022-10-18 05:08:40,957:iAssistbot:Post response value received
+2022-10-18 05:08:40,957:iAssistbot:Solution sliced
+2022-10-18 05:08:40,957:iAssistbot:Solution fetched
+2022-10-18 05:08:47,443:app:/msteams/messages route
+2022-10-18 05:08:47,445:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:08:47,516:iAssistbot:115 has confidence = 0.8894422
+2022-10-18 05:08:47,516:iAssistbot:115
+2022-10-18 05:08:47,517:iAssistbot:Index value received
+2022-10-18 05:08:47,521:iAssistbot:Post response value received
+2022-10-18 05:08:47,521:iAssistbot:Solution sliced
+2022-10-18 05:08:47,521:iAssistbot:Solution fetched
+2022-10-18 05:09:31,788:app:/msteams/messages route
+2022-10-18 05:09:31,791:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:09:43,303:app:/msteams/messages route
+2022-10-18 05:09:43,305:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:09:43,381:iAssistbot:110 has confidence = 0.99908507
+2022-10-18 05:09:43,381:iAssistbot:110
+2022-10-18 05:09:43,381:iAssistbot:Index value received
+2022-10-18 05:09:43,386:iAssistbot:Post response value received
+2022-10-18 05:09:43,386:iAssistbot:Solution sliced
+2022-10-18 05:09:43,386:iAssistbot:Solution fetched
+2022-10-18 05:17:19,584:app:/msteams/messages route
+2022-10-18 05:17:19,962:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:17:21,019:iAssistbot:5 has confidence = 1.0
+2022-10-18 05:17:21,020:iAssistbot:5
+2022-10-18 05:17:21,020:iAssistbot:Index value received
+2022-10-18 05:17:21,025:iAssistbot:Post response value received
+2022-10-18 05:17:21,025:iAssistbot:Solution sliced
+2022-10-18 05:17:21,026:iAssistbot:Solution fetched
+2022-10-18 05:17:31,960:app:/msteams/messages route
+2022-10-18 05:17:31,962:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:17:32,041:iAssistbot:116 has confidence = 0.8851909
+2022-10-18 05:17:32,041:iAssistbot:116
+2022-10-18 05:17:32,041:iAssistbot:Index value received
+2022-10-18 05:17:32,046:iAssistbot:Post response value received
+2022-10-18 05:17:32,046:iAssistbot:Solution sliced
+2022-10-18 05:17:32,046:iAssistbot:Solution fetched
+2022-10-18 05:17:57,926:app:/msteams/messages route
+2022-10-18 05:17:57,929:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:17:58,000:iAssistbot:4 has confidence = 0.99992776
+2022-10-18 05:17:58,001:iAssistbot:4
+2022-10-18 05:17:58,001:iAssistbot:Index value received
+2022-10-18 05:17:58,005:iAssistbot:Post response value received
+2022-10-18 05:17:58,006:iAssistbot:Solution sliced
+2022-10-18 05:17:58,006:iAssistbot:Solution fetched
+2022-10-18 05:18:05,797:app:/msteams/messages route
+2022-10-18 05:18:05,799:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:18:05,873:iAssistbot:116 has confidence = 0.8851909
+2022-10-18 05:18:05,874:iAssistbot:116
+2022-10-18 05:18:05,874:iAssistbot:Index value received
+2022-10-18 05:18:05,879:iAssistbot:Post response value received
+2022-10-18 05:18:05,879:iAssistbot:Solution sliced
+2022-10-18 05:18:05,879:iAssistbot:Solution fetched
+2022-10-18 05:19:37,109:app:/msteams/messages route
+2022-10-18 05:19:37,112:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:19:37,189:iAssistbot:109 has confidence = 0.9981692
+2022-10-18 05:19:37,189:iAssistbot:109
+2022-10-18 05:19:37,189:iAssistbot:Index value received
+2022-10-18 05:19:37,194:iAssistbot:Post response value received
+2022-10-18 05:19:37,194:iAssistbot:Solution sliced
+2022-10-18 05:19:37,194:iAssistbot:Solution fetched
+2022-10-18 05:19:47,668:app:/msteams/messages route
+2022-10-18 05:19:47,670:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:19:47,743:iAssistbot:4 has confidence = 0.99992776
+2022-10-18 05:19:47,744:iAssistbot:4
+2022-10-18 05:19:47,744:iAssistbot:Index value received
+2022-10-18 05:19:47,748:iAssistbot:Post response value received
+2022-10-18 05:19:47,748:iAssistbot:Solution sliced
+2022-10-18 05:19:47,749:iAssistbot:Solution fetched
+2022-10-18 05:19:59,836:app:/msteams/messages route
+2022-10-18 05:19:59,838:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:19:59,910:iAssistbot:116 has confidence = 0.8851909
+2022-10-18 05:19:59,911:iAssistbot:116
+2022-10-18 05:19:59,911:iAssistbot:Index value received
+2022-10-18 05:19:59,915:iAssistbot:Post response value received
+2022-10-18 05:19:59,915:iAssistbot:Solution sliced
+2022-10-18 05:19:59,916:iAssistbot:Solution fetched
+2022-10-18 05:20:06,757:app:/msteams/messages route
+2022-10-18 05:20:06,760:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:20:06,845:iAssistbot:5 has confidence = 1.0
+2022-10-18 05:20:06,846:iAssistbot:5
+2022-10-18 05:20:06,846:iAssistbot:Index value received
+2022-10-18 05:20:06,850:iAssistbot:Post response value received
+2022-10-18 05:20:06,851:iAssistbot:Solution sliced
+2022-10-18 05:20:06,851:iAssistbot:Solution fetched
+2022-10-18 05:20:16,718:app:/msteams/messages route
+2022-10-18 05:20:16,720:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:20:16,798:iAssistbot:115 has confidence = 0.8894422
+2022-10-18 05:20:16,799:iAssistbot:115
+2022-10-18 05:20:16,799:iAssistbot:Index value received
+2022-10-18 05:20:16,803:iAssistbot:Post response value received
+2022-10-18 05:20:16,804:iAssistbot:Solution sliced
+2022-10-18 05:20:16,804:iAssistbot:Solution fetched
+2022-10-18 05:20:33,163:app:/msteams/messages route
+2022-10-18 05:20:33,165:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:20:33,239:iAssistbot:5 has confidence = 1.0
+2022-10-18 05:20:33,239:iAssistbot:5
+2022-10-18 05:20:33,239:iAssistbot:Index value received
+2022-10-18 05:20:33,244:iAssistbot:Post response value received
+2022-10-18 05:20:33,244:iAssistbot:Solution sliced
+2022-10-18 05:20:33,244:iAssistbot:Solution fetched
+2022-10-18 05:20:41,957:app:/msteams/messages route
+2022-10-18 05:20:41,959:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:20:42,037:iAssistbot:116 has confidence = 0.8851909
+2022-10-18 05:20:42,037:iAssistbot:116
+2022-10-18 05:20:42,037:iAssistbot:Index value received
+2022-10-18 05:20:42,042:iAssistbot:Post response value received
+2022-10-18 05:20:42,042:iAssistbot:Solution sliced
+2022-10-18 05:20:42,042:iAssistbot:Solution fetched
+2022-10-18 05:20:55,349:app:/msteams/messages route
+2022-10-18 05:20:55,351:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:20:55,424:iAssistbot:1 has confidence = 1.0
+2022-10-18 05:20:55,425:iAssistbot:1
+2022-10-18 05:20:55,425:iAssistbot:Index value received
+2022-10-18 05:20:55,429:iAssistbot:Post response value received
+2022-10-18 05:20:55,429:iAssistbot:Solution sliced
+2022-10-18 05:20:55,429:iAssistbot:Solution fetched
+2022-10-18 05:21:01,558:app:/msteams/messages route
+2022-10-18 05:21:01,561:iAssistbot:iAssist bot Custom app text message received
+2022-10-18 05:21:01,640:iAssistbot:115 has confidence = 0.8894422
+2022-10-18 05:21:01,641:iAssistbot:115
+2022-10-18 05:21:01,641:iAssistbot:Index value received
+2022-10-18 05:21:01,646:iAssistbot:Post response value received
+2022-10-18 05:21:01,646:iAssistbot:Solution sliced
+2022-10-18 05:21:01,646:iAssistbot:Solution fetched
+2022-11-23 08:29:50,626:app:/msteams/messages route
+2022-11-23 08:34:00,059:app:/msteams/messages route
+2022-11-23 08:34:36,353:app:/msteams/messages route
+2022-11-23 08:34:36,355:iAssistbot:iAssist bot Custom app text message received
+2022-11-23 08:34:37,781:iAssistbot:109 has confidence = 0.9981692
+2022-11-23 08:34:37,781:iAssistbot:109
+2022-11-23 08:34:37,781:iAssistbot:Index value received
+2022-11-23 08:34:37,798:iAssistbot:Post response value received
+2022-11-23 08:34:37,802:iAssistbot:Solution sliced
+2022-11-23 08:34:37,802:iAssistbot:Solution fetched
+2022-11-23 08:34:51,833:app:/msteams/messages route
+2022-11-23 08:34:51,836:iAssistbot:iAssist bot Custom app text message received
+2022-11-23 08:34:51,902:iAssistbot:1 has confidence = 0.99984324
+2022-11-23 08:34:51,903:iAssistbot:1
+2022-11-23 08:34:51,903:iAssistbot:Index value received
+2022-11-23 08:34:51,906:iAssistbot:Post response value received
+2022-11-23 08:34:51,907:iAssistbot:Solution sliced
+2022-11-23 08:34:51,907:iAssistbot:Solution fetched
+2022-11-23 08:34:57,060:app:/msteams/messages route
+2022-11-23 08:34:57,063:iAssistbot:iAssist bot Custom app text message received
+2022-11-23 08:34:57,132:iAssistbot:116 has confidence = 0.8851909
+2022-11-23 08:34:57,132:iAssistbot:116
+2022-11-23 08:34:57,132:iAssistbot:Index value received
+2022-11-23 08:34:57,136:iAssistbot:Post response value received
+2022-11-23 08:34:57,137:iAssistbot:Solution sliced
+2022-11-23 08:34:57,137:iAssistbot:Solution fetched
+2022-11-23 08:35:15,472:app:/msteams/messages route
+2022-11-23 08:35:15,475:iAssistbot:iAssist bot Custom app text message received
+2022-11-23 08:35:15,543:iAssistbot:2 has confidence = 1.0
+2022-11-23 08:35:15,543:iAssistbot:2
+2022-11-23 08:35:15,544:iAssistbot:Index value received
+2022-11-23 08:35:15,547:iAssistbot:Post response value received
+2022-11-23 08:35:15,547:iAssistbot:Solution sliced
+2022-11-23 08:35:15,548:iAssistbot:Solution fetched
+2022-11-23 08:35:24,832:app:/msteams/messages route
+2022-11-23 08:35:24,834:iAssistbot:iAssist bot Custom app text message received
+2022-11-23 08:35:24,902:iAssistbot:116 has confidence = 0.8851909
+2022-11-23 08:35:24,903:iAssistbot:116
+2022-11-23 08:35:24,903:iAssistbot:Index value received
+2022-11-23 08:35:24,907:iAssistbot:Post response value received
+2022-11-23 08:35:24,907:iAssistbot:Solution sliced
+2022-11-23 08:35:24,907:iAssistbot:Solution fetched
+2022-11-23 08:57:43,025:app:/msteams/messages route
+2022-11-23 09:04:13,349:app:/msteams/messages route
